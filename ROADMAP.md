@@ -23,6 +23,8 @@
 
 - [ ] Establish higher education credit transfer as the first pilot
 - [ ] Select one asset-intensive industry as the second pilot
+- [ ] Establish the Healthcare Semantic Fidelity Benchmark as a synthetic cross-platform initiative
+- [ ] Deliver the laboratory-results benchmark from H0 through H3
 - [ ] Qualify one measurable use case per pilot
 - [ ] Document baseline approaches and costs
 - [ ] Create synthetic test fixtures
