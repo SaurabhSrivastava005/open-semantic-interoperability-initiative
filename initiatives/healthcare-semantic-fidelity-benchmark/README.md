@@ -76,6 +76,8 @@ Clinical terminology mappings and expected clinical meaning must be reviewed by 
 | [Evidence maturity model](docs/evidence-maturity.md) | Separates synthetic evidence from production evidence |
 | [Delivery plan](docs/delivery-plan.md) | Defines work packages, roles, releases and acceptance criteria |
 | [Governance and risk](docs/governance-and-risk.md) | Defines safety, authority, privacy, licensing and publication controls |
+| [Reference architecture](docs/reference-architecture.md) | Defines components, trust boundaries and deployment modes |
+| [Artifact contract](docs/artifact-contract.md) | Defines machine-readable records, lifecycle fields and validation rules |
 
 ## First release target
 
