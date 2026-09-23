@@ -244,3 +244,20 @@ Minimum credible team capacity:
 - maintainer or product lead: 0.3.
 
 Volunteer delivery may take longer than the indicative schedule.
+
+
+## Delivery narrative
+
+The proposed schedule begins with governance because fixture development depends on knowing who can approve meaning. Starting with code may appear faster, but it creates rework when terminology, licensing or clinical-review requirements emerge later. The first two weeks should therefore establish the use-case contract, decision rights, standards register and reviewer availability.
+
+Profile design and source-model design can proceed together once the boundary is stable. The profile team identifies the minimum FHIR elements required to preserve the use case. The source-model team creates two intentionally different ways of representing the same events. Regular joint review is necessary because an unrealistic source model will produce an easy benchmark, while an excessively broad profile will become difficult to implement.
+
+Fixture development is expected to be the largest reasoning task. Each case needs a source representation, expected target, assertions, provenance and review. The team should begin with five end-to-end fixtures rather than designing all 100 records at once. Those first cases will expose gaps in the artifact schemas, test runner and review process.
+
+The deterministic baseline should be built before the AI evaluation. Without a stable non-AI transformation and reviewed answer set, the team cannot determine whether AI improves speed or merely introduces variation. The AI work package should use the same mappings and held-out cases, record abstentions and measure reviewer effort.
+
+Cross-platform execution should begin only after local tests are reproducible. Differences found too early may reflect an unstable benchmark rather than meaningful platform behaviour. HAPI FHIR provides a practical open baseline. A managed service can then test portability, provided the account, cost and synthetic-data controls are approved.
+
+The final two weeks focus on evidence rather than cosmetic presentation. The team must reproduce a representative subset independently, review disputed results, confirm licences, state maturity and publish limitations. A release should be delayed if required clinical or terminology review is incomplete. Schedule pressure is not a valid reason to lower the evidence boundary.
+
+The 8 to 12 week estimate assumes contributors with relevant experience and timely reviewer participation. A volunteer project may need a longer calendar period. The delivery plan should report actual effort after the first release so later profiles can be estimated from evidence rather than optimism.
