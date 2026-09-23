@@ -300,3 +300,20 @@ A regression run is required when:
 - a scoring rule changes.
 
 Results from different benchmark versions must not be compared without documenting the change.
+
+
+## Detailed benchmark method
+
+A benchmark scenario begins with meaning, not with a target JSON file. The author first describes the event in plain language, including what was ordered, what specimen was collected, what was measured, what result was produced and whether the result was preliminary, final or corrected. This narrative becomes the anchor against which both source representations and the target FHIR representation are judged.
+
+The two source systems should differ in realistic ways. Synthetic Laboratory A might send an HL7 Version 2 ORU message with a local observation code, a compact abnormal flag and a conventional unit. Synthetic Laboratory B might expose a JSON record with a descriptive code, a different status vocabulary and an SI unit. The differences must be intentional and documented. Random cosmetic variation does not create a meaningful interoperability test.
+
+The reviewed target representation is then created. A FHIR specialist ensures that resources and references follow the selected profile. A terminology specialist checks code systems and versions. A laboratory reviewer determines whether the representation retains the clinically material context. Approval from all relevant roles establishes the reference answer for that benchmark release.
+
+Assertions are written at multiple levels. Structural assertions confirm that the resource is valid. Terminology assertions confirm that codes and units come from the declared systems. Semantic assertions verify relationships and meaning. Provenance assertions confirm that the result can be traced to its source and transformation. A platform can therefore pass one layer and fail another, which produces a more useful diagnosis than one combined pass or fail result.
+
+Scoring must not allow many trivial successes to hide one dangerous failure. If a system correctly maps 99 fields but assigns the wrong test identity, a simple percentage may still look excellent. The severity model gives clinically material errors greater visibility and publishes raw failures alongside any score. The dangerous false-equivalence rate should be treated as a primary measure for AI-assisted mapping.
+
+Held-out cases are necessary when testing AI. If the same fixture descriptions appear in prompts, examples or training material available to the evaluated system, accuracy may overstate generalisation. The benchmark should maintain a controlled set of unseen scenarios, record the model and configuration, and distinguish mapping generation from reviewer approval.
+
+A successful run creates more than a results table. It records the complete environment, input fixtures, output resources, assertion results, logs, versions and checksums. Another contributor should be able to reproduce the run or explain precisely why reproduction is not possible. That requirement turns a demonstration into evidence.
