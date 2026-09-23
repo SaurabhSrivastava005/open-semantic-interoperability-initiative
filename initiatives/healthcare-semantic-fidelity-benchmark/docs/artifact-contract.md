@@ -202,3 +202,20 @@ Use semantic versioning for released benchmark packages.
 - Patch: correction that does not change expected semantic outcomes.
 
 If a correction changes an expected clinical or terminology result, treat it as at least a minor release and invalidate affected evidence.
+
+
+## How the artifacts work together
+
+The standards register establishes the external authorities and versions used by the benchmark. A profile references these records instead of embedding undocumented assumptions. When a standard or terminology release changes, dependency links identify which mappings, fixtures and evidence may need review.
+
+A mapping record captures one semantic decision. It does not merely state that one field maps to another. It describes the relationship, transformation, evidence, reviewer, effective period and semantic loss. This allows an exact mapping to be distinguished from a use-case-specific equivalence or a derived value.
+
+A fixture combines mapping decisions into a testable scenario. Its manifest identifies the synthetic source, expected target and assertions. Keeping the fixture self-describing makes it possible to run a subset of scenarios, audit its provenance or retire it without searching through prose documentation.
+
+Assertions convert expectations into executable rules. A critical assertion should explain why failure matters and identify its authority. For example, an assertion may require that the original unit remain available after conversion. The rationale explains that future reviewers need to reconstruct the source representation and verify the conversion.
+
+The test-run record describes one execution, while the evidence record describes what can reasonably be concluded from one or more executions. This separation prevents a successful run from automatically becoming a broad claim. Evidence review determines scope, maturity, limitations and review date.
+
+Semantic decision records connect disagreements and changes to the affected artifacts. If reviewers later decide that a mapping was too broad, the decision record identifies the replacement, and dependency links trigger regression testing. The old evidence can then be superseded with a visible explanation.
+
+Machine-readable validation is important because documentation rules are easily forgotten. The release pipeline should reject artifacts with missing licences, unpinned versions or incomplete approvals. Automation cannot determine clinical correctness, but it can ensure that the required human decision is present and traceable.
