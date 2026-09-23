@@ -193,3 +193,18 @@ Diagnosis and treatment are excluded because they introduce a different risk cla
 Production patient matching is excluded because it requires organisational identity rules, operational data and privacy controls that synthetic semantic testing cannot establish.
 
 Complete microbiology and genomics are deferred because their result structures, temporal behaviour and interpretation require specialised profiles and reviewers.
+
+
+## Detailed problem narrative
+
+Healthcare interoperability is often described as a transport problem. In that framing, success means that one system can send a message and another system can receive it. Modern standards and platforms have improved this layer considerably. The harder problem begins after delivery: whether the receiving system interprets the information in the same way as the sender intended.
+
+Consider a local laboratory code such as `GLU-F`. A mapping tool may infer that it represents fasting glucose and assign a LOINC code. That inference may be correct, but the label alone may not reveal whether the measurement was performed on serum, plasma or whole blood, whether the patient was actually fasting, or which method was used. These details can affect the appropriate standard code and the interpretation of the result. A confident mapping based only on a similar label may therefore create a false equivalence.
+
+Units create another class of risk. Converting between mg/dL and mmol/L is mathematically straightforward only when the analyte and conversion factor are known. A generic unit conversion without test identity can be technically precise and clinically wrong. The benchmark therefore treats code selection, unit conversion and specimen context as connected decisions rather than independent fields.
+
+Result status is equally important. A preliminary result, a final result and a corrected result do not represent interchangeable states. If a corrected result is loaded as a new final result without a link to the earlier version, a downstream user may see two apparently valid results and select the wrong one. The benchmark must verify both the current value and the history of how that value changed.
+
+The defined scope limits the problem to data representation and transformation. It does not attempt to determine whether a value indicates disease, whether a clinician should act, or which treatment is appropriate. Those questions require clinical decision-support governance, broader evidence and production controls. Keeping them outside the first benchmark allows the initiative to investigate semantic preservation without implying clinical authority it does not possess.
+
+Success should be understood as bounded evidence. If a transformation preserves all declared meaning across the published scenarios, SIEL can say that the tested implementation passed those scenarios under the recorded versions and conditions. It cannot say that the product is universally interoperable. This language may appear cautious, but it is essential for keeping evidence aligned with what was actually tested.
