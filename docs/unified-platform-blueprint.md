@@ -33,6 +33,7 @@ Minimum capabilities:
 
 - classification by industry, use case and artifact type;
 - steward, licence and access metadata;
+- automated licence compatibility and dependency gates;
 - version and deprecation tracking;
 - relationship and overlap graph;
 - source verification date;
@@ -241,7 +242,10 @@ This use case crosses admissions, student records, curriculum, learning outcomes
 
 ### Candidate source standards
 
-- CAUDIT HERM for capability and conceptual alignment;
+- CAUDIT HERM as an optional external reference for capability and conceptual alignment, subject to the reuse boundary below;
+- CEDS for common education definitions and cross-sector vocabulary;
+- Ed-Fi for school-to-tertiary transition mappings and API implementation patterns;
+- Project Unicorn for interoperability adoption, procurement and ecosystem lessons, not as a technical standard;
 - 1EdTech Edu-API for academic enterprise exchange;
 - 1EdTech CASE for competencies and learning outcomes;
 - PESC for transcripts and academic records;
@@ -252,6 +256,19 @@ This use case crosses admissions, student records, curriculum, learning outcomes
 - AVETMISS for Australian VET reporting;
 - AQF and institutional policy for qualification and credit rules; and
 - W3C Verifiable Credentials for portable evidence where appropriate.
+
+FAIR Principles apply to the pilot's research data, metadata and published evidence. HL7 FHIR may be used as an optional overlay when a use case crosses into university health services, academic medical centres or clinical research. Neither FAIR nor FHIR is part of the core credit-transfer model.
+
+### CAUDIT HERM integration boundary
+
+SIEL must remain independently implementable and openly licensed without HERM files or copied HERM content.
+
+- Reference a specific HERM version by name and canonical URL.
+- Keep HERM mappings optional and non-normative.
+- Do not copy or bundle HERM diagrams, catalogues, definitions or ArchiMate assets.
+- Require licence review and written CAUDIT permission before publishing adaptations, derived assets or commercially distributed integrations.
+- Record provenance and do not imply CAUDIT endorsement.
+- Prefer independently authored SIEL concepts that can map to several reference models.
 
 ### Pilot questions
 
@@ -330,6 +347,10 @@ Definitions, documentation and human review interfaces should support accessibil
 
 Create a public benchmark for deterministic and AI-assisted ontology and schema mapping, including ambiguous, adversarial and jurisdiction-sensitive cases.
 
+### 9.13 Licence and dependency assurance
+
+Add automated policy checks that distinguish citation, implementation, adaptation and redistribution rights. A profile must identify restricted external dependencies and prove that its open core can operate without them.
+
 ## 10. Recommended delivery sequence
 
 ### Phase 1: Registry and templates
@@ -377,4 +398,3 @@ The platform succeeds only if an independent organisation can:
 8. maintain the implementation through an upstream change.
 
 If the platform only produces another conceptual model, it has failed its purpose.
-
