@@ -44,6 +44,7 @@ SIEL is at **E0: Concept**. The charter is open for review. Nothing in this repo
 
 - [Founding Charter](CHARTER.md)
 - [Standards and Open Initiatives Landscape](docs/standards-landscape.md)
+- [Industry Standards Landscapes](docs/industries/README.md)
 - [Unified Platform Blueprint](docs/unified-platform-blueprint.md)
 - [Governance](GOVERNANCE.md)
 - [Contributing](CONTRIBUTING.md)
