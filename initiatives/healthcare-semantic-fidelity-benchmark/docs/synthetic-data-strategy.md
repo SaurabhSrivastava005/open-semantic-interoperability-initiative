@@ -46,7 +46,7 @@ SIEL will create synthetic laboratory edge cases specifically designed to expose
 6. Add a positive test.
 7. Add at least one negative or ambiguous variant.
 8. Review the expected outcome.
-9. record provenance and licences.
+9. Record provenance and licences.
 10. Publish the fixture and limitations.
 
 ## Required fixture metadata
@@ -176,11 +176,11 @@ Synthetic data should be evaluated across:
 3. Check terminology and unit combinations.
 4. Check temporal and workflow consistency.
 5. Check diversity and boundary coverage.
-6. confirm synthetic identifiers and organisations.
-7. scan for secrets and sensitive patterns.
-8. review licence and attribution.
-9. obtain required clinical and terminology approvals.
-10. assign the data class and release status.
+6. Confirm synthetic identifiers and organisations.
+7. Scan for secrets and sensitive patterns.
+8. Review licence and attribution.
+9. Obtain required clinical and terminology approvals.
+10. Assign the data class and release status.
 
 ## Partner output controls
 
