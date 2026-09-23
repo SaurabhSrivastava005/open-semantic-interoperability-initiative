@@ -151,3 +151,18 @@ The synthetic public benchmark should still apply:
 - documented cleanup.
 
 These controls support trustworthy evidence even when no patient data is present.
+
+
+## Architecture walkthrough
+
+A benchmark run starts when the test runner selects a released scenario. The scenario contains two source representations, a reviewed expected output and a set of assertions. Only one source is processed in a given transformation path, which allows the result from each fictional laboratory to be evaluated independently.
+
+The transformation adapter is intentionally replaceable. For the open baseline it may be a small deterministic component. For a vendor evaluation it may invoke an integration engine or managed platform. The adapter contract remains the same: accept the source fixture, produce the target resources, preserve provenance and report unresolved conditions without silently discarding them.
+
+Terminology validation is separated from the transformation because code systems and value sets have their own versions, licences and operational behaviour. A transformation may emit a code that looks correct but is inactive in the pinned release. The terminology service provides the evidence needed to distinguish a valid current code from a stale or unsupported value.
+
+The FHIR implementation and structural validator establish whether the output follows the selected technical specification. The semantic assertion engine then compares meaning against the reviewed answer. This sequence is important because a malformed resource should not proceed as if it were semantically testable, while a structurally valid resource must still face semantic checks.
+
+The evidence collector combines these results without collapsing them. A report should show that a scenario passed structural validation but failed specimen preservation, for example. This makes the result actionable for implementers and prevents technical conformance from masking semantic failure.
+
+In partner-local mode, the architecture moves to the organisation rather than bringing data to SIEL. The same runner and assertion model execute inside the partner boundary. Network access should be disabled unless required and approved. Logs and evidence exports are reviewed before leaving the environment. This design supports collaboration while keeping operational data under the partner's control.
