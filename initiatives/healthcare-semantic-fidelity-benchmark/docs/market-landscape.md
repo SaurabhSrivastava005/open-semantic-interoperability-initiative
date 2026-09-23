@@ -145,3 +145,18 @@ A vendor may not:
 - Give maintainers a factual-response period.
 - Preserve superseded reports rather than silently replacing them.
 - Report missing access or unsupported capabilities without speculation.
+
+
+## Detailed market interpretation
+
+The market already contains mature products for moving healthcare data. Integration engines can parse HL7 Version 2 messages, transform fields, route events and manage acknowledgements. FHIR servers can validate, store and expose resources. Terminology servers can expand value sets and validate codes. Cloud platforms can operate these capabilities at scale with identity, audit and security controls. Rebuilding these components would consume the initiative's resources without addressing its distinctive research question.
+
+The existence of these products does not eliminate semantic risk. Most platforms are configurable, and their behaviour depends on the profiles, mappings, terminology releases and local rules supplied by an implementation team. Two organisations can use the same integration engine and produce different interpretations of the same source message. Product capability and implementation correctness are therefore different forms of evidence.
+
+SIEL should test a configured implementation, not issue broad judgements about a vendor. A result should name the platform version, adapter, profile, terminology service and configuration used. If a later version behaves differently, the earlier evidence remains historically valid but cannot automatically be transferred to the new version. This protects vendors from overly broad conclusions and protects users from unsupported assurances.
+
+The initiative's defensible contribution is the reviewed challenge set and the evidence method. Existing conformance tools are valuable and should be reused for structural validation. SIEL adds assertions that ask whether a transformation preserved the expected test, specimen, value, unit, status, reference range and provenance. It then makes the method and result reproducible.
+
+Vendor participation can improve the benchmark when it is governed carefully. A vendor may identify that a fixture is unrealistic, contribute an adapter or demonstrate that a result arose from an incorrect configuration. SIEL should welcome these corrections. However, the vendor should not control the expected clinical answer or suppress an unfavourable but reproducible result. The documented dispute process exists to distinguish legitimate correction from commercial influence.
+
+Any statement that the evidence problem is under-served should remain provisional until the market review is systematic. The initiative should maintain a dated register of tools and research, invite factual corrections and avoid marketing language such as first, only or complete unless the evidence supports it. Credibility will come from the quality of the benchmark, not from an early uniqueness claim.
