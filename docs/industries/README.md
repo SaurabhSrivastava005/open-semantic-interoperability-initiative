@@ -20,7 +20,7 @@ Each industry landscape records:
 | Healthcare and life sciences | [Healthcare](healthcare/standards-landscape.md) |
 | Banking and financial services | [Financial services](financial-services/standards-landscape.md) |
 | Energy and utilities | [Energy and utilities](energy-utilities/standards-landscape.md) |
-| Real estate and construction | [Built environment](built-environment/standards-landscape.md) |
+| Real estate and construction | [Real estate and construction](real-estate-construction/standards-landscape.md) |
 | Manufacturing, automotive and supply chain | [Manufacturing and supply chain](manufacturing-supply-chain/standards-landscape.md) |
 | Government and public services | [Government and public services](government-public-services/standards-landscape.md) |
 | Retail and consumer | [Retail and consumer](retail-consumer/standards-landscape.md) |
