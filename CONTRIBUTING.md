@@ -1,6 +1,6 @@
 # Contributing
 
-OSII welcomes domain expertise, implementation evidence, specifications, code, tests and constructive criticism.
+SIEL welcomes domain expertise, implementation evidence, specifications, code, tests and constructive criticism.
 
 ## Before contributing
 

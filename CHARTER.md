@@ -1,6 +1,8 @@
-# Open Semantic Interoperability Initiative
+# Semantic Interoperability Evidence Lab
 
 ## Founding Charter and Industry Model Blueprint
+
+**Tagline:** Evidence before standards
 
 **Version:** 0.2  
 **Status:** Draft for public review  
@@ -9,11 +11,11 @@
 
 ## 1. Purpose
 
-The Open Semantic Interoperability Initiative, or OSII, is an independent, open research and engineering initiative focused on a practical question:
+The Semantic Interoperability Evidence Lab, or SIEL, is an independent, open, industry-focused research and engineering initiative built around a practical question:
 
 > How can organisations share trusted meaning across systems, companies and AI agents without forcing every participant to adopt one common physical data model?
 
-OSII will develop and test an industry-oriented alternative to large, universal data models. Its outputs will be open, modular, machine-readable and measurable through implementation.
+SIEL will evaluate how existing standards, semantic models, data contracts and AI-assisted mappings perform in real implementation scenarios. Where gaps remain, it will develop and test modular, machine-readable components that are measurable through implementation.
 
 The initiative begins without endorsing, comparing with or depending on any existing proprietary model or accelerator.
 
@@ -25,7 +27,7 @@ AI makes semantic interoperability more urgent. AI agents need more than table n
 
 AI also creates an opportunity. It can assist with schema discovery, mapping and change analysis. It cannot be allowed to invent authoritative meaning or bypass accountable governance.
 
-OSII will combine stable shared semantics, industry-owned context, use-case data contracts and governed AI assistance.
+SIEL will combine stable shared semantics, industry-owned context, use-case data contracts and governed AI assistance.
 
 ## 3. Design Principles
 
@@ -40,13 +42,13 @@ OSII will combine stable shared semantics, industry-owned context, use-case data
 9. **Publish failures and limitations as evidence.**
 10. **Prefer evolution and versioning over forced universal consensus.**
 
-## 4. The OSII Industry Model
+## 4. The SIEL Industry Model
 
-OSII uses a six-layer model.
+SIEL uses a six-layer model.
 
 | Layer | Purpose | Ownership |
 |---|---|---|
-| 1. Semantic Kernel | Defines a small set of cross-industry concepts and rules | OSII community |
+| 1. Semantic Kernel | Defines a small set of cross-industry concepts and rules | SIEL community |
 | 2. Industry Semantic Pack | Captures the language, regulations and value chain of an industry | Industry working group |
 | 3. Use-Case Contract | Defines the minimum information needed for a business exchange | Participating producers and consumers |
 | 4. Source Mapping | Connects local applications and schemas to the contract | Implementing organisation |
@@ -150,7 +152,7 @@ Every specification must include tests. Conformance will be assessed at componen
 
 ## 5. Initial Industry Portfolio
 
-OSII should establish industry packs progressively. The initial portfolio is designed around sectors with high interoperability cost, strong governance requirements and clear operational use cases.
+SIEL should establish industry packs progressively. The initial portfolio is designed around sectors with high interoperability cost, strong governance requirements and clear operational use cases.
 
 | Industry | Initial focus | Candidate first use case |
 |---|---|---|
@@ -313,7 +315,7 @@ Failed pilots and evidence against a proposed design are valid outputs. Publicat
 
 ## 11. Intellectual Property Boundary
 
-### Open OSII assets
+### Open SIEL assets
 
 - cross-industry specifications;
 - approved industry semantic packs;
@@ -417,7 +419,7 @@ Subject to formal legal review:
 
 ## 15. Initial Success Criteria
 
-OSII will be considered successful in its first phase if it:
+SIEL will be considered successful in its first phase if it:
 
 - publishes machine-readable specifications, not only conceptual material;
 - creates one stable semantic kernel without expanding it into a universal ontology;
@@ -432,4 +434,3 @@ OSII will be considered successful in its first phase if it:
 ## 16. Founding Principle
 
 > Shared meaning should be precise enough to support trust, small enough to implement and flexible enough to respect industry context.
-

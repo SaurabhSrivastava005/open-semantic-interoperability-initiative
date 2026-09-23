@@ -1,6 +1,6 @@
 # Licensing
 
-OSII uses a dual-licensing model.
+SIEL uses a dual-licensing model.
 
 ## Software and machine-readable schemas
 

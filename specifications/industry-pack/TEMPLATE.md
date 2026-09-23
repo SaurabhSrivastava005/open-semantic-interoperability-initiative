@@ -21,7 +21,7 @@ Document concepts whose meaning is established by law, regulation, formal policy
 
 ## 5. Core concepts and relationships
 
-Extend the OSII semantic kernel only where industry-specific meaning is required.
+Extend the SIEL semantic kernel only where industry-specific meaning is required.
 
 ## 6. Industry events
 

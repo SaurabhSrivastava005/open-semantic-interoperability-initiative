@@ -1,16 +1,18 @@
-# Open Semantic Interoperability Initiative
+# Semantic Interoperability Evidence Lab
 
-The Open Semantic Interoperability Initiative, or OSII, is an open research and engineering initiative for building trusted semantic interoperability across industries, systems and AI agents without requiring every participant to adopt one physical data model.
+**Evidence before standards.**
+
+The Semantic Interoperability Evidence Lab, or SIEL, is an open, industry-focused research and engineering initiative that tests how existing standards, semantic models, data contracts and AI-assisted mappings perform across systems, organisations and AI agents.
 
 ## The problem
 
 Large common and canonical data models often attempt to standardise too much before delivering operational value. Industries differ in regulation, terminology, evidence requirements and operating models. AI increases the need for precise, machine-readable meaning, but it does not remove the need for accountable governance.
 
-OSII starts with an industry problem, defines the minimum shared meaning required for a use case and tests the result through implementation.
+SIEL starts with an industry problem, reuses authoritative standards where possible, defines the minimum shared meaning required for a use case and tests the result through implementation.
 
 ## Architecture
 
-OSII uses six independently adoptable layers:
+SIEL uses six independently adoptable layers:
 
 1. **Semantic Kernel**: a small set of stable cross-industry concepts.
 2. **Industry Semantic Pack**: industry language, rules, relationships and events.
@@ -34,7 +36,7 @@ Industry packs begin only when credible contributors, a measurable problem and a
 
 ## Repository status
 
-OSII is at **E0: Concept**. The charter is open for review. Nothing in this repository should yet be described as an adopted industry standard.
+SIEL is at **E0: Concept**. The charter is open for review. Nothing in this repository should yet be described as an adopted industry standard.
 
 ## Start here
 

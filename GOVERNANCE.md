@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OSII governance protects three qualities: industry authority, technical openness and evidence-based decision-making.
+SIEL governance protects three qualities: industry authority, technical openness and evidence-based decision-making.
 
 ## Core Council
 
