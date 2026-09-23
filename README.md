@@ -67,3 +67,5 @@ SIEL does not create another universal ontology or canonical data model. It prov
 Documentation, diagrams, templates and research publications are licensed under [CC BY 4.0](LICENSES/README.md). Generic software, schemas and validation tools are licensed under [Apache License 2.0](LICENSES/Apache-2.0.txt).
 
 Third-party standards and externally owned content are excluded unless redistribution is explicitly permitted.
+
+External reference models may be cited or mapped only within their licence terms. Restricted assets must not become mandatory dependencies of SIEL profiles, and copying, adaptation or bundling requires explicit permission where the source terms demand it.
