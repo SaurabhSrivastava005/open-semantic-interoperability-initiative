@@ -218,3 +218,20 @@ Before an H3 release, define:
 - reviewer succession;
 - deprecation process; and
 - response expectations for critical defects.
+
+
+## Governance in practice
+
+Healthcare semantics cannot be governed by repository maintainers alone. A maintainer may understand version control and FHIR tooling but lack authority to determine whether a laboratory mapping is clinically acceptable. The governance structure separates technical stewardship from terminology and clinical judgement so that approval follows competence.
+
+The Semantic Review Group is responsible for meaning. When a local code appears to match a LOINC concept, the group examines specimen, component, property, timing, scale and method rather than approving on label similarity. Where evidence is incomplete, it can classify the mapping as conditional or unresolved. This is preferable to forcing a decision for the sake of benchmark coverage.
+
+The Evidence Review Group examines whether the test supports the published claim. It checks that scenarios were not excluded selectively, versions were pinned, failures were reported and measures were calculated consistently. This group does not replace the clinical reviewer. Its role is to ensure that accepted clinical decisions were tested and reported correctly.
+
+Conflicts of interest are expected and should be managed transparently. A contributor employed by a tested vendor may provide valuable technical insight, but should not be the only person approving that vendor's disputed result. A terminology-service maintainer may explain system behaviour, while an independent reviewer decides how the evidence is characterised.
+
+Risk scoring helps prioritise work, but a numerical score must not override judgement. A rare error that could change test identity or value may require immediate action even if its calculated priority is lower than a frequent documentation defect. The risk register should therefore record both the score and any mandatory escalation rationale.
+
+The dispute process protects the benchmark from becoming static or political. A challenger must identify the exact claim or fixture and provide evidence. Reviewers who did not author the disputed item assess the challenge. The outcome and rationale remain visible so users can understand how the benchmark evolved.
+
+Sustainability is also a governance issue. Terminology and implementation guides change, maintainers leave and platforms are upgraded. Before publishing H3 evidence, the initiative must identify who reviews dependencies, how unsupported releases are archived and how critical defects are communicated. An abandoned benchmark should be clearly marked rather than appearing current indefinitely.
