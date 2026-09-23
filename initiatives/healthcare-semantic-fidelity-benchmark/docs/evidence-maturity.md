@@ -211,3 +211,18 @@ Evidence requires review when:
 - the use case expands.
 
 The release should declare its review period. Expired evidence is not automatically false, but it must not be represented as current without review.
+
+
+## How to interpret maturity
+
+The maturity model describes the context in which evidence was produced. It is not a quality score. An H2 benchmark may be exceptionally well designed and reproducible, but it remains synthetic. An H5 result may involve operational data, yet still be weak if the study is poorly controlled or inadequately reviewed. Users must consider both maturity and evidence strength.
+
+H0 establishes that the problem is coherent and bounded. At this level, the initiative may publish a hypothesis, architecture and safety boundary, but it has not demonstrated that the proposed artifacts work. H1 adds executable structural validation. This proves that profiles and examples can be processed by the selected tools, but it still says little about preserved clinical meaning.
+
+H2 is the first semantic evidence level. Reference answers have been reviewed, difficult synthetic cases exist and the benchmark can measure whether transformations preserve the intended meaning. H3 adds portability by executing the same benchmark across more than one implementation. This is the target for the first public release because it demonstrates that the work is more than a single-platform demonstration.
+
+H4 introduces approved local structures or code lists from a partner. This is valuable because it tests assumptions against real organisational variation without necessarily using patient data. H5 adds controlled operational data inside an approved environment. At this level, privacy, ethics, data quality and disclosure controls become material parts of the evidence.
+
+H6 represents bounded production evidence. It requires more than a technically successful deployment. The implementation must have change control, monitoring, incident response, accountable clinical governance and an observation period. Even then, the claim applies only to the named workflow, versions, organisation and period.
+
+Advancement should never occur simply because time has passed or a document has been completed. Each gate requires evidence artifacts and approval. If a critical expected answer is later found to be wrong, affected results may need to be withdrawn or superseded. Maintaining that history is part of scientific and engineering integrity.
