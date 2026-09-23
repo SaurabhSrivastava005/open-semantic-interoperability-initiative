@@ -104,3 +104,73 @@ This initiative is an implementation of the SIEL method:
 6. test multiple implementations;
 7. measure semantic loss; and
 8. publish evidence and limitations.
+
+
+## Operating model
+
+The initiative operates through five linked workstreams.
+
+| Workstream | Responsibility | Primary outputs |
+|---|---|---|
+| Standards and profile | Select and constrain existing standards | FHIR profiles, value sets and implementation decisions |
+| Synthetic data | Create realistic, non-identifiable inputs | Source schemas, messages, FHIR examples and edge cases |
+| Semantic assurance | Establish expected meaning | Mapping records, terminology decisions and reviewer approvals |
+| Test and evidence | Execute reproducible evaluations | Assertions, test runs, measures, failures and evidence reports |
+| Governance and adoption | Control claims and participation | Decision records, risk reviews, release gates and partner model |
+
+No workstream may independently publish a clinical-validity claim. Evidence claims require the approvals defined in the governance document.
+
+## End-to-end lifecycle
+
+1. A use case and risk boundary are approved.
+2. Applicable standards and terminology versions are pinned.
+3. Synthetic clinical scenarios are designed.
+4. Two source representations and one expected target representation are authored.
+5. Structural, terminology and semantic assertions are written.
+6. Clinical and terminology reviewers approve the expected meaning.
+7. Deterministic transformations establish a baseline.
+8. AI-assisted methods run against the same held-out cases.
+9. Results are executed across the selected platforms.
+10. Failures, disagreements and limitations are published.
+11. The evidence maturity level is assigned.
+12. A change to any dependency triggers impact review and regression testing.
+
+## Planned repository structure
+
+```text
+healthcare-semantic-fidelity-benchmark/
+├── README.md
+├── docs/
+├── registry/
+│   ├── standards.yaml
+│   ├── terminology-releases.yaml
+│   └── implementations.yaml
+├── profiles/
+│   └── laboratory-results/
+├── source-models/
+│   ├── synthetic-lab-a/
+│   └── synthetic-lab-b/
+├── mappings/
+├── fixtures/
+│   ├── valid/
+│   ├── invalid/
+│   ├── ambiguous/
+│   └── held-out/
+├── tests/
+├── evidence/
+├── decisions/
+└── tools/
+```
+
+Executable folders will be added only when their schemas, licences and review requirements are approved.
+
+## Decision principles
+
+- Reuse before creating.
+- Use the minimum semantic scope required by the use case.
+- Preserve original values and local codes.
+- Record every material transformation.
+- Prefer an unresolved mapping over a false exact match.
+- Keep synthetic evidence distinct from production evidence.
+- Publish negative findings.
+- Make every reported result reproducible.
