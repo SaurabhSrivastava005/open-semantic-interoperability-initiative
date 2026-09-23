@@ -6,6 +6,8 @@ This document records major initiatives relevant to the Semantic Interoperabilit
 
 The landscape is broad and changes continuously. This is a curated register of material initiatives, not a claim that every local, commercial or unpublished model has been captured.
 
+Detailed industry registers are maintained in the [Industry Standards Landscapes](industries/README.md) directory.
+
 ## Classification of availability
 
 The word "open" can describe different things. SIEL distinguishes them explicitly.
