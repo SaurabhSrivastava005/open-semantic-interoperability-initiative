@@ -41,6 +41,8 @@ SIEL will combine stable shared semantics, industry-owned context, use-case data
 8. **Measure value through working implementations.**
 9. **Publish failures and limitations as evidence.**
 10. **Prefer evolution and versioning over forced universal consensus.**
+11. **Reuse authoritative standards before creating new semantic assets.**
+12. **Make licensing, availability and evidence visible before recommending adoption.**
 
 ## 4. The SIEL Industry Model
 
@@ -434,3 +436,18 @@ SIEL will be considered successful in its first phase if it:
 ## 16. Founding Principle
 
 > Shared meaning should be precise enough to support trust, small enough to implement and flexible enough to respect industry context.
+
+## 17. Unified Platform Direction
+
+SIEL will develop a standards-aware platform composed of:
+
+- a machine-readable standards registry;
+- an Industry Interoperability Profile Studio;
+- a semantic mapping workbench;
+- contract and policy packaging;
+- an agent context compiler;
+- a conformance lab;
+- an evidence registry; and
+- a developer and community portal.
+
+The platform will integrate and test existing initiatives rather than reproduce their specifications.

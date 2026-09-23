@@ -10,15 +10,24 @@
 - [ ] Publish use-case-contract template
 - [ ] Publish semantic-context-manifest specification
 - [ ] Publish mapping-record specification
+- [x] Publish initial standards and initiatives landscape
+- [x] Publish unified platform blueprint
+- [ ] Create machine-readable standards registry
+- [ ] Add licence and availability classification
+- [ ] Define semantic decision record
+- [ ] Define evidence record schema
 
 ## Phase 1: Two industry pilots
 
-- [ ] Select no more than two initial industries
-- [ ] Qualify one measurable use case per industry
+- [ ] Establish higher education credit transfer as the first pilot
+- [ ] Select one asset-intensive industry as the second pilot
+- [ ] Qualify one measurable use case per pilot
 - [ ] Document baseline approaches and costs
 - [ ] Create synthetic test fixtures
 - [ ] Map at least two different source structures per use case
 - [ ] Publish conformance tests
+- [ ] Test deterministic and AI-assisted mappings separately
+- [ ] Add jurisdiction overlays and temporal versioning
 
 ## Phase 2: Independent evaluation
 
@@ -35,3 +44,12 @@
 - [ ] Develop reference mapping workbench
 - [ ] Expand industry portfolio only where evidence and maintainers exist
 
+## Phase 4: Unified platform
+
+- [ ] Build searchable standards registry
+- [ ] Build Industry Interoperability Profile Studio
+- [ ] Build semantic mapping and approval workbench
+- [ ] Build automated conformance runner
+- [ ] Build evidence registry and dashboard
+- [ ] Generate agent context packages
+- [ ] Add upstream standard change monitoring

@@ -4,6 +4,8 @@
 
 The Semantic Interoperability Evidence Lab, or SIEL, is an open, industry-focused research and engineering initiative that tests how existing standards, semantic models, data contracts and AI-assisted mappings perform across systems, organisations and AI agents.
 
+SIEL is developing a unified implementation and evidence platform. It discovers what already exists, records reuse constraints, creates minimal Industry Interoperability Profiles, validates mappings and publishes evidence before an approach is described as proven.
+
 ## The problem
 
 Large common and canonical data models often attempt to standardise too much before delivering operational value. Industries differ in regulation, terminology, evidence requirements and operating models. AI increases the need for precise, machine-readable meaning, but it does not remove the need for accountable governance.
@@ -41,11 +43,24 @@ SIEL is at **E0: Concept**. The charter is open for review. Nothing in this repo
 ## Start here
 
 - [Founding Charter](CHARTER.md)
+- [Standards and Open Initiatives Landscape](docs/standards-landscape.md)
+- [Unified Platform Blueprint](docs/unified-platform-blueprint.md)
 - [Governance](GOVERNANCE.md)
 - [Contributing](CONTRIBUTING.md)
 - [Roadmap](ROADMAP.md)
 - [Security](SECURITY.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
+
+## How SIEL is different
+
+SIEL does not create another universal ontology or canonical data model. It provides a unified layer for:
+
+- discovering and classifying existing standards;
+- creating minimal, use-case-specific interoperability profiles;
+- mapping across standards and source systems;
+- packaging contracts, policies and agent-ready context;
+- running reproducible conformance tests; and
+- publishing positive and negative implementation evidence.
 
 ## Licensing
 
