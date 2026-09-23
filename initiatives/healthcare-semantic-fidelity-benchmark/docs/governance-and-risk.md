@@ -100,3 +100,121 @@ If real or suspected patient data is committed:
 8. document corrective actions.
 
 Do not treat ordinary file deletion as sufficient removal from Git history.
+
+
+## Decision bodies
+
+### Initiative maintainers
+
+Responsible for scope, backlog, releases, repository quality and coordination.
+
+### Semantic Review Group
+
+Responsible for disputed mappings, terminology decisions, semantic-loss classification and reference answers.
+
+Membership should include FHIR, terminology and laboratory expertise. A decision involving clinically material meaning requires a qualified clinical or laboratory reviewer.
+
+### Evidence Review Group
+
+Responsible for test methods, measures, reproducibility, platform comparisons and maturity claims.
+
+### Safety, Privacy and Licence Review
+
+Responsible for data classification, disclosure controls, security issues, external-content reuse and incident escalation.
+
+Small initial teams may combine groups, but decision roles and conflicts must remain visible.
+
+## Decision types
+
+| Type | Example | Approval |
+|---|---|---|
+| Technical | Repository layout or test-runner change | Technical maintainer and reviewer |
+| Profile | Required FHIR element | FHIR reviewer and semantic reviewer |
+| Terminology | LOINC mapping or value-set change | Terminology reviewer and laboratory reviewer |
+| Clinical meaning | Reference range interpretation | Qualified clinical or laboratory reviewer |
+| Evidence | Measure or maturity claim | Evidence reviewer |
+| Safety | Expansion into decision support | Safety review and initiative approval |
+| Licence | Inclusion of external terminology content | Licence review |
+| Release | H2 or H3 publication | Maintainer plus required reviewers |
+
+## Semantic decision record
+
+A material decision should record:
+
+- decision identifier;
+- question;
+- context;
+- affected scenarios;
+- options considered;
+- authoritative sources;
+- reviewer roles;
+- conflicts of interest;
+- decision;
+- rationale;
+- limitations;
+- effective date;
+- superseded decision; and
+- required regression tests.
+
+## Risk scoring
+
+Score each risk on:
+
+- likelihood from 1 to 5;
+- impact from 1 to 5;
+- detectability from 1 to 5, where 5 is difficult to detect.
+
+```text
+risk_priority = likelihood * impact * detectability
+```
+
+The score supports prioritisation but does not replace clinical judgement. Any plausible patient-safety risk may require escalation regardless of total score.
+
+## Release gates
+
+A public release requires:
+
+- synthetic-data confirmation;
+- automated validation;
+- approved reference answers;
+- complete licences and provenance;
+- risk review;
+- reproducibility instructions;
+- independent review of a representative sample;
+- published failures and unresolved cases;
+- evidence-maturity statement; and
+- maintainer approval.
+
+## Dispute process
+
+1. Open a documented challenge.
+2. Identify the exact fixture, assertion or claim.
+3. Provide authoritative sources or reproducible evidence.
+4. Record conflicts of interest.
+5. Assign reviewers who did not author the disputed item.
+6. Decide to accept, revise, reject or leave unresolved.
+7. Record the rationale.
+8. rerun affected tests.
+9. publish the outcome and affected releases.
+
+An unresolved dispute must remain visible and must not be converted into consensus by majority vote alone.
+
+## Vulnerability and safety reporting
+
+Security vulnerabilities should follow the repository security policy and should not be disclosed in a public issue before coordinated review.
+
+Potential clinical-safety defects should be marked clearly, assigned urgent review and linked to affected fixtures, mappings, releases and evidence claims.
+
+## Sustainability
+
+Before an H3 release, define:
+
+- maintainer ownership;
+- supported benchmark versions;
+- dependency-update cadence;
+- terminology-update cadence;
+- archive policy;
+- funding disclosures;
+- reviewer succession;
+- deprecation process; and
+- response expectations for critical defects.
