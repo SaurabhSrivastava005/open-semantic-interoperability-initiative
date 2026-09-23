@@ -109,3 +109,87 @@ The initiative succeeds when an independent party can:
 6. understand the limitations of the evidence.
 
 A technically valid FHIR output is not sufficient if clinically material meaning was altered without being recorded.
+
+
+## Stakeholder problems
+
+| Stakeholder | Current problem | Evidence needed |
+|---|---|---|
+| Laboratory | Local codes and workflows are difficult to expose consistently | Mappings preserve test, specimen, method, value and status |
+| Hospital integration team | Interfaces pass messages but local meaning remains undocumented | Reproducible semantic assertions and traceable transformations |
+| EHR vendor | Profiles vary across customers and jurisdictions | Clear minimum profile and deviation register |
+| Research team | Operational data may lose context during extraction | Provenance, source values and documented semantic loss |
+| AI product team | Valid FHIR is treated as trustworthy input | Measured mapping accuracy, abstention and dangerous-error rates |
+| Governance team | Compliance claims exceed available evidence | Versioned evidence levels and claim controls |
+| Regulator or auditor | Transformation decisions are difficult to reconstruct | Immutable test runs, reviewer decisions and dependency versions |
+
+## Decisions the benchmark must make
+
+The benchmark must explicitly decide:
+
+- which clinical scenarios are represented;
+- which FHIR version and implementation guides apply;
+- which elements are mandatory, optional or prohibited;
+- which terminology release is authoritative;
+- when two local concepts are equivalent;
+- when unit conversion is allowed;
+- when a result must remain unresolved;
+- which changes are clinically material;
+- what a platform must preserve;
+- who may approve expected meaning; and
+- what evidence supports each published claim.
+
+## Semantic fidelity definition
+
+For this initiative, semantic fidelity means that the target representation retains all information required to interpret the test result correctly within the declared use case.
+
+It includes:
+
+- identity of the test;
+- specimen and method where material;
+- result value and data type;
+- unit and conversion history;
+- reference range and applicable population;
+- result status and amendment history;
+- relevant timestamps;
+- ordering and performing organisations;
+- source-system identifiers; and
+- provenance of every transformation.
+
+A transformation may be conformant but not faithful. A transformation may also be faithful for one declared purpose and insufficient for another.
+
+## Non-functional scope
+
+The benchmark will also record:
+
+- reproducibility;
+- deterministic execution;
+- test isolation;
+- dependency pinning;
+- auditability;
+- portability;
+- accessibility of documentation;
+- execution cost;
+- runtime;
+- error transparency; and
+- change resilience.
+
+Performance testing is limited to benchmark execution. It is not a hospital-scale capacity certification.
+
+## Assumptions
+
+- All public fixtures are synthetic.
+- Clinical expected results are reviewed before release.
+- Local synthetic code systems are intentionally fictional.
+- FHIR R4 is the initial exchange baseline.
+- Terminology content is included only where licensing permits.
+- The benchmark tests named implementations and versions, not entire vendors.
+- An unresolved result is an acceptable outcome when equivalence cannot be supported.
+
+## Exclusions rationale
+
+Diagnosis and treatment are excluded because they introduce a different risk class, require broader clinical evidence and would distract from the initial interoperability hypothesis.
+
+Production patient matching is excluded because it requires organisational identity rules, operational data and privacy controls that synthetic semantic testing cannot establish.
+
+Complete microbiology and genomics are deferred because their result structures, temporal behaviour and interpretation require specialised profiles and reviewers.
