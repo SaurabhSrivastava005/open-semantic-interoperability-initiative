@@ -14,6 +14,8 @@
 - [x] Publish unified platform blueprint
 - [ ] Create machine-readable standards registry
 - [ ] Add licence and availability classification
+- [ ] Add automated licence compatibility and dependency checks
+- [ ] Document the CAUDIT HERM reuse boundary and seek written permission before any derived integration
 - [ ] Define semantic decision record
 - [ ] Define evidence record schema
 
@@ -28,6 +30,10 @@
 - [ ] Publish conformance tests
 - [ ] Test deterministic and AI-assisted mappings separately
 - [ ] Add jurisdiction overlays and temporal versioning
+- [ ] Map CEDS and Ed-Fi at the school-to-tertiary boundary
+- [ ] Apply Project Unicorn adoption lessons without treating it as a technical standard
+- [ ] Apply FAIR Principles to research and evidence assets
+- [ ] Define an optional HL7 FHIR overlay for academic health and clinical research use cases
 
 ## Phase 2: Independent evaluation
 
