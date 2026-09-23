@@ -176,3 +176,16 @@ Executable folders will be added only when their schemas, licences and review re
 - Keep synthetic evidence distinct from production evidence.
 - Publish negative findings.
 - Make every reported result reproducible.
+
+
+## How the initiative works in practice
+
+The benchmark begins with a deliberately narrow question rather than a broad ambition to standardise healthcare. A laboratory result is selected because it looks simple at first glance, yet it exposes nearly every important semantic-interoperability problem. A result has a test identity, a value, a unit, a specimen, a method, a reference range, a status and a history. If any of these elements is changed or omitted, the receiving system may interpret the record differently even though the resulting FHIR resource passes technical validation.
+
+For each scenario, the team creates two fictional laboratory systems that express the same intended event differently. One system may use a short local code and conventional units, while another uses a descriptive code and SI units. The benchmark does not assume that one source is better. It identifies the meaning each source is trying to communicate and defines a reviewed target representation. This makes it possible to test whether an integration tool, mapping method or AI assistant preserves that meaning.
+
+The benchmark separates the creation of an answer from the testing of a product. Clinical and terminology reviewers approve the expected representation before any platform is scored. Test engineers then execute the same fixture against different implementations. This separation prevents a product-specific output from quietly becoming the definition of correctness.
+
+The initial objective is not to certify a hospital integration. It is to produce an H3 evidence package showing that a published synthetic benchmark can be run across at least two implementations and produce reproducible results. That outcome would demonstrate that the SIEL method is executable. It would not demonstrate that the same mappings are safe for every laboratory or jurisdiction.
+
+The initiative is intentionally open about failure. If two qualified reviewers disagree about a mapping, that disagreement becomes evidence. If a platform accepts an invalid resource, the result is recorded. If an AI system correctly refuses to map an ambiguous code, that abstention is treated as a positive outcome rather than a failure to automate. This approach is central to the initiative because false certainty is more dangerous than an explicitly unresolved case.
