@@ -21,6 +21,18 @@ The word "open" can describe different things. SIEL distinguishes them explicitl
 
 Availability must be verified for every profile. Public access does not automatically grant unrestricted reuse.
 
+## Priority education, research and health frameworks
+
+| Standard or framework | Domain or scope | Primary purpose | SIEL treatment |
+|---|---|---|---|
+| CEDS, Common Education Data Standards | Early learning, K-12, postsecondary, adult education and workforce | Unified vocabulary, common definitions and reference models for reporting, integration and exchange | Reuse definitions where terms permit, map sector transitions and avoid recreating an education-wide dictionary |
+| Project Unicorn | Primarily K-12 interoperability adoption | Improve secure data interoperability through an ecosystem pledge, rubrics, certification resources and procurement guidance | Reuse adoption and vendor-engagement practices; do not present it as a schema, API or event model |
+| Ed-Fi | Primarily K-12 data integration | Open data standard, REST API specifications and technology suite for operational and analytical interoperability | Evaluate its CEDS-aligned model and APIs for school-to-tertiary transition use cases |
+| FAIR Principles | Research, laboratories and digital research assets | Make data and metadata findable, accessible, interoperable and reusable by people and machines | Use as evidence and metadata quality principles; do not treat FAIR as a data model or API |
+| HL7 and FHIR | Healthcare, EHR, academic medical centres, university health services and clinical research | Exchange clinical and administrative healthcare information using governed standards, modular resources and APIs | Use FHIR as an optional clinical overlay and retain relevant HL7 governance and implementation guides |
+
+Project Unicorn and Ed-Fi are listed separately because they solve different parts of the problem. Project Unicorn advances ecosystem adoption and vendor accountability. Ed-Fi supplies a technical data standard, APIs and an implementation suite.
+
 ## 1. Cross-industry foundations
 
 | Initiative | Steward | Primary focus | What is available | How SIEL uses it |
@@ -34,6 +46,7 @@ Availability must be verified for every profile. Public access does not automati
 | [DCAT 3](https://www.w3.org/TR/vocab-dcat-3/) | W3C | Interoperable data catalogues | Public RDF vocabulary | Describe datasets, services and profile assets |
 | [PROV-O](https://www.w3.org/TR/prov-o/) | W3C | Provenance | Public ontology and supporting specifications | Record the origin and transformation history of mappings and evidence |
 | [ODRL](https://www.w3.org/TR/odrl-model/) | W3C | Permissions, prohibitions and duties | Public information model and vocabulary | Represent machine-readable usage policies where suitable |
+| [FAIR Principles](https://www.go-fair.org/fair-principles/) | FAIR community | Findability, accessibility, interoperability and reuse of digital research assets | Guiding principles and implementation guidance, not a data model or exchange API | Apply to SIEL datasets, metadata, profiles and evidence packages, especially in research contexts |
 | [Eclipse Semantic Modeling Framework](https://projects.eclipse.org/projects/dt.esmf) | Eclipse Foundation | Semantic aspect models and digital twins using SAMM | Open-source SDK, modelling language, validation and generation tools | Evaluate for asset-intensive industry profiles |
 | [Eclipse Dataspace Components](https://projects.eclipse.org/projects/technology.edc) | Eclipse Foundation | Sovereign inter-organisational data sharing | Open-source components, architecture and protocol implementation | Provide exchange and policy-enforcement infrastructure beneath profiles |
 | [Eclipse Dataspace Protocol](https://projects.eclipse.org/proposals/eclipse-dataspace-protocol) | Eclipse Foundation | Interoperable data-space interactions | Public specification project | Test contract negotiation and data-sharing interoperability |
@@ -48,10 +61,24 @@ Higher education has several partially overlapping layers. No single initiative 
 
 | Initiative | Geography | Primary focus | What is available | Key limitation or boundary |
 |---|---|---|---|---|
-| [CAUDIT Higher Education Reference Models](https://www.caudit.edu.au/communities/caudit-higher-education-reference-models) | Australia and international collaboration | Business, data, application and technology reference models | Versioned catalogues, diagrams and ArchiMate assets under CC BY-NC-SA conditions | Reference architecture rather than an executable exchange standard; commercial use restrictions require care |
+| [CAUDIT Higher Education Reference Models](https://www.caudit.edu.au/communities/caudit-higher-education-reference-models) | Australia and international collaboration | Business, data, application and technology reference models | Versioned catalogues, diagrams and ArchiMate assets under CC BY-NC-SA 4.0 conditions and additional stated distribution restrictions | Useful as an external reference architecture, but it must not become a copied, bundled or mandatory dependency of SIEL |
 | [UCISA capability work and CAUDIT collaboration](https://www.caudit.edu.au/resources/caudit-ucisa-joint-statement-reference-models/) | United Kingdom and Australasia | Harmonisation of higher education capability and data models | Public collaboration statements and sector models subject to their terms | Primarily architecture and capability planning |
 | [European Higher Education Interoperability Framework](https://education.ec.europa.eu/focus-topics/digital-education/hub/workshops-and-working-groups/interoperability-framework) | European Union | Organisational, semantic and technical interoperability across institutions | Public framework and policy work | Framework-level guidance with implementation distributed across other initiatives |
-| [MortarCAPS Higher Learning Data Standard](https://www.caudit.edu.au/resources/timeline-of-collaboration-and-innovation/) | Australia | HERM-aligned higher learning data standard | Sector materials and releases subject to steward availability and licensing | Adoption, independent implementation and production evidence must be evaluated rather than assumed |
+
+#### CAUDIT HERM reuse boundary
+
+CAUDIT HERM can inform SIEL, but its current terms can create future constraints for an openly licensed platform and for commercial adopters. The CAUDIT page states that the models are available under CC BY-NC-SA 4.0 and also states restrictions concerning commercial use, bundling, sublicensing and passing the models to other organisations.
+
+| Proposed action | Risk | SIEL policy |
+|---|---|---|
+| Link to a named HERM version and describe its scope | Low | Permitted with accurate attribution and no claim of endorsement |
+| Use HERM as a non-normative architectural reference | Low to moderate | Permitted when SIEL remains usable without HERM assets |
+| Copy definitions, diagrams, catalogues or ArchiMate files into SIEL | High | Do not include without explicit written permission and licence review |
+| Adapt, translate or redistribute HERM content in a SIEL profile | High | Treat as potential derivative work and require written permission and legal review |
+| Bundle HERM assets into a hosted, vendor or commercial product | High | Do not do this under the currently stated terms without a separate agreement |
+| Publish an independently authored mapping to HERM concepts | Moderate | Keep it optional, record provenance, avoid copied expression and review before release |
+
+SIEL profiles must be independently authored, openly licensed and implementable without access to restricted HERM assets. A future partnership or written permission from CAUDIT may enable deeper integration. This section is project risk guidance, not legal advice.
 
 ### 2.2 Academic administration and data exchange
 
@@ -59,8 +86,9 @@ Higher education has several partially overlapping layers. No single initiative 
 |---|---|---|---|
 | [1EdTech Edu-API](https://www.1edtech.org/standards/edu-api) | Exchange of core higher education enterprise data between SIS, LMS and other systems | Candidate specification, models and community work | Candidate source for enrolment, course and academic enterprise contracts |
 | [PESC Approved Standards](https://pesc.org/approved-standards/) | Transcripts, admissions, test scores and education records | EDI, XML, JSON and document standards with governance through PESC | Candidate exchange formats and mappings for admissions and records |
-| [Common Education Data Standards](https://ceds.ed.gov/) | P-20W vocabulary, data models and integration structures | Vocabulary, integrated data store, warehouse model, tools and open-source community | Broad education vocabulary and cross-sector reference source |
-| [Ed-Fi Data Standard](https://docs.ed-fi.org/reference/data-exchange/data-standard/) | K-12 operational and analytical interoperability | Open-source data standard, API specifications and technology suite | Useful for school-to-tertiary transitions and comparison of implementation maturity |
+| [Common Education Data Standards](https://ceds.ed.gov/) | Early learning, K-12, postsecondary, adult education and workforce vocabulary, data models and integration structures | Common definitions, vocabulary, integrated data store, warehouse model, tools and open-source community | Broad education dictionary and cross-sector reference source for reporting and exchange |
+| [Project Unicorn](https://www.projectunicorn.org/) | K-12 education data interoperability and ecosystem adoption | Interoperability pledge, rubrics, certification resources, guidance and community programs | Adoption and procurement model; it is an initiative, not an API or data standard |
+| [Ed-Fi Data Standard](https://docs.ed-fi.org/reference/data-exchange/data-standard/) | Primarily K-12 operational and analytical interoperability | CEDS-aligned open-source data standard, API specifications and technology suite | Useful for vendor integration, event and API patterns, and school-to-tertiary transitions |
 | [Schools Interoperability Framework](https://www.a4l.org/page/SIFSpecifications) | School administration and data exchange | Specifications and ecosystem resources | Relevant at the school and transition boundary |
 
 ### 2.3 Teaching, learning and curriculum
@@ -103,6 +131,7 @@ Higher education has several partially overlapping layers. No single initiative 
 | [ROR](https://ror.org/) | Open organisation identifiers | Open registry, API and data dump | Institution identity reconciliation |
 | [Crossref](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) | Publication metadata and persistent identifiers | REST APIs and public metadata services | Publication and relationship evidence |
 | [DataCite](https://support.datacite.org/docs/api) | Research dataset and output identifiers | APIs, metadata schema and public services | Dataset and research-output identity |
+| [FAIR Principles](https://www.go-fair.org/fair-principles/) | Research data and digital research assets | Principles for making data and metadata findable, accessible, interoperable and reusable | Quality criteria for research metadata, provenance and machine-actionable evidence; not a schema or API |
 
 ### 2.7 Australian reporting and regulatory semantics
 
@@ -123,7 +152,7 @@ These are authoritative reporting specifications. They are not automatically reu
 
 | Initiative | Focus | Availability and use |
 |---|---|---|
-| [HL7 FHIR](https://hl7.org/fhir/) | Exchange of healthcare information through modular resources and APIs | Public specification with implementations and jurisdictional profiles |
+| [HL7 FHIR](https://hl7.org/fhir/) | Clinical and administrative data exchange for academic medical centres, university health services, EHR systems and clinical research | Public specification, modular resources, REST APIs, implementation guides and jurisdictional profiles; use as an optional clinical overlay rather than a general education model |
 | [openEHR](https://specifications.openehr.org/) | Clinically governed health-record models and archetypes | Open specifications, archetypes and open-source implementations |
 | [OMOP Common Data Model](https://ohdsi.github.io/CommonDataModel/) | Observational health analytics and research | Open model, vocabularies, tools and community through OHDSI |
 | [SNOMED CT](https://www.snomed.org/) | Clinical terminology | International terminology with licensing conditions that vary by territory |
@@ -237,4 +266,3 @@ Every initiative record should eventually include:
 - last verification date.
 
 This register should become machine-readable and be updated through reviewed pull requests.
-
