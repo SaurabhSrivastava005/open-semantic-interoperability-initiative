@@ -212,3 +212,18 @@ A move from H3 to H4 requires:
 - licence review for local code lists;
 - no default external telemetry; and
 - evidence that the public benchmark remains independent of partner data.
+
+
+## Detailed synthetic-data approach
+
+Synthetic data is not merely a privacy substitute. In this benchmark it is also an experimental control. Because the initiative defines the scenario and expected meaning, it can introduce one variation at a time and observe whether an implementation handles that variation correctly. Real operational data is often richer, but its ambiguity makes it harder to determine whether a failed result came from the platform, the mapping or an undocumented source convention.
+
+Generated patient records provide useful background context, but generated realism should not be confused with clinical authority. Synthea can create coherent fictional histories and FHIR resources, yet it may not generate the specialised laboratory edge cases required by the benchmark. The initiative should therefore combine generated background records with manually designed challenge cases.
+
+A curated fixture should explain why each value exists. If a potassium result uses a particular specimen and unit, the fixture should identify the rule supporting that combination. If a reference range changes by age or sex, the scenario should explain which patient characteristic activates the range. This makes review more efficient and helps future contributors distinguish a deliberate edge case from a data-quality mistake.
+
+The use of obviously fictional organisations and identifiers reduces the chance that synthetic records will be mistaken for real data. Names, addresses and identifiers should come from controlled generators rather than copied examples. Free text deserves special scrutiny because it is easy to paste content from a real report accidentally. Automated scanning should complement, not replace, human review.
+
+Synthetic data also has limitations that must remain visible. It will not reproduce every local code, historical anomaly, interface workaround or workflow exception found in a hospital. An H3 result can show that the benchmark works across synthetic scenarios and named platforms. It cannot show how much effort a specific organisation will require to map decades of local practice.
+
+The partner-local model provides a path forward without centralising patient data. A healthcare organisation can run the same test framework against approved local structures within its environment. The organisation can share aggregate evidence after disclosure review. This approach keeps source records under organisational control while allowing SIEL to learn whether its synthetic cases reflect real implementation problems.
