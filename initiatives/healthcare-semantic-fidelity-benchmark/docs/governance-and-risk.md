@@ -194,8 +194,8 @@ A public release requires:
 5. Assign reviewers who did not author the disputed item.
 6. Decide to accept, revise, reject or leave unresolved.
 7. Record the rationale.
-8. rerun affected tests.
-9. publish the outcome and affected releases.
+8. Rerun affected tests.
+9. Publish the outcome and affected releases.
 
 An unresolved dispute must remain visible and must not be converted into consensus by majority vote alone.
 
